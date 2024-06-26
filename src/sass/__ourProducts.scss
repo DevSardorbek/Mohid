@@ -1,0 +1,60 @@
+.ourProducts__wrapper {
+  .ourProducts__section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 49px;
+    .ourtProducts__card {
+      width: 334px;
+      .product__img {
+        background-color: #f6f6f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 337px;
+        img {
+          width: 250px;
+          height: 280px;
+          object-fit: contain;
+        }
+      }
+      .product__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 14px;
+        h2 {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 36px;
+          text-align: center;
+          color: #1e1d1d;
+        }
+        .product__price {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          del {
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 24.1px;
+            text-align: right;
+            color: #8b8e99;
+          }
+          h3 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28.92px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}

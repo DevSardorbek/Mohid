@@ -1,0 +1,20 @@
+.newProducts__wrapper {
+  margin-top: 73px;
+  margin-bottom: 135px;
+  .newProducts__section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .newProducts__card {
+      width: 350px;
+      background-color: #f6f6f6;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: center;
+      padding: 44px 21px 44px 39px;
+    }
+  }
+}
