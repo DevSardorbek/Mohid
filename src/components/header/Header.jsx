@@ -4,30 +4,46 @@ import { IoSearch } from "react-icons/io5";
 import { BsFillPersonFill } from "react-icons/bs";
 import { IoCart } from "react-icons/io5";
 import "../../sass/__header.scss";
+import { Link } from "react-router-dom";
 const navlink = [
   {
     id: 1,
     link: "Home",
+    path: "/",
   },
   {
     id: 2,
     link: "Brands",
+    path: "/brands",
   },
+
   {
     id: 3,
     link: "Recent Products",
+    path: "/products",
   },
   {
     id: 4,
     link: "Contact",
+    path: "/contact",
   },
   {
     id: 5,
     link: "About",
+    path: "/",
+  },
+  {
+    id: 6,
+    link: "Login",
+    path: "/login",
   },
 ];
 const Header = () => {
-  let navlinkItems = navlink.map((nav) => <p key={nav.id}>{nav.link}</p>);
+  let navlinkItems = navlink.map((nav) => (
+    <Link to={nav.path} key={nav.id}>
+      {nav.link}
+    </Link>
+  ));
   return (
     <div className="header__wrapper">
       <div className="container">

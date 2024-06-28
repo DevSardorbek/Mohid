@@ -21,13 +21,14 @@
       display: flex;
       align-items: center;
       gap: 27px;
-      color: #8b8e99;
-      p {
+      a {
+        color: #8b8e99;
         cursor: pointer;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
         text-align: left;
+        text-decoration: none;
       }
     }
     .header__items {

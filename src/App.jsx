@@ -1,22 +1,27 @@
-import { useState } from "react";
+import React from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/header/Header";
-
-import "./sass/style.scss";
-import Hero from "./components/hero/Hero";
-import NewProducts from "./components/newProducts/NewProducts";
-import About from "./components/about/About";
-import Newslatter from "./components/newsletter/Newslatter";
 import Footer from "./components/footer/Footer";
-import OurProducts from "./components/ourProducts/OurProducts";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Admin from "./pages/admin/Admin";
+import Auth from "./pages/auth/Auth";
+import "./sass/style.scss";
+
 function App() {
+  const location = useLocation();
+  const showHeader = location.pathname !== "/admin";
+
   return (
     <>
-      <Header />
-      <Hero />
-      <NewProducts />
-      <OurProducts />
-      <About />
-      <Newslatter />
+      {showHeader && <Header />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Auth />}>
+          <Route path="admin" element={<Admin />} />
+        </Route>
+      </Routes>
       <Footer />
     </>
   );
